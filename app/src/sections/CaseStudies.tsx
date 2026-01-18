@@ -35,7 +35,7 @@ export function CaseStudies() {
         projects: 4.5
       },
       after: {
-        leads: 15,
+        leads: 22,
         conversion: 40,
         projects: 6
       },
@@ -54,7 +54,7 @@ export function CaseStudies() {
         projects: 8.75
       },
       after: {
-        leads: 25,
+        leads: 38,
         conversion: 50,
         projects: 12.5
       },
@@ -84,7 +84,7 @@ export function CaseStudies() {
   ];
 
   return (
-    <section 
+    <section
       id="proof"
       ref={sectionRef}
       className="relative w-full py-20 lg:py-32 bg-white overflow-hidden"
@@ -92,9 +92,8 @@ export function CaseStudies() {
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal/10 rounded-full mb-6">
               <TrendingUp className="w-5 h-5 text-teal" />
               <span className="text-sm font-medium text-teal">Real Results</span>
@@ -110,11 +109,10 @@ export function CaseStudies() {
           {/* Case Study Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
             {caseStudies.map((study, index) => (
-              <div 
+              <div
                 key={index}
-                className={`group bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-card hover:shadow-teal-lg transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
+                className={`group bg-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-card hover:shadow-teal-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
                 style={{ transitionDelay: `${(index + 1) * 150}ms` }}
               >
                 {/* Image */}
@@ -125,7 +123,7 @@ export function CaseStudies() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  
+
                   {/* Overlay Info */}
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="flex items-center gap-2 mb-2">
@@ -202,9 +200,8 @@ export function CaseStudies() {
           </div>
 
           {/* ROI Comparison Chart */}
-          <div className={`bg-teal-dark rounded-2xl lg:rounded-3xl p-8 lg:p-12 transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`bg-teal-dark rounded-2xl lg:rounded-3xl p-8 lg:p-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="text-center mb-10">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
                 ROI Comparison Across Tiers
@@ -220,20 +217,20 @@ export function CaseStudies() {
                   <p className="text-sm text-teal-200 mb-2">{study.tier}</p>
                   <p className="text-3xl font-bold text-white mb-1">{study.result}</p>
                   <p className="text-sm text-teal-200 mb-4">Annual Revenue</p>
-                  
+
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-teal-200">Investment</span>
                       <span className="text-white">
                         ${(study.tier === "Tier 1 System" ? 697 : study.tier === "Tier 2 System" ? 1397 : 2197) * 12}
-/year
+                        /year
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-teal-200">ROI</span>
                       <span className="text-yellow font-semibold">
                         {Math.round((
-                          (study.tier === "Tier 1 System" ? 60000 : study.tier === "Tier 2 System" ? 150000 : 260000) / 
+                          (study.tier === "Tier 1 System" ? 60000 : study.tier === "Tier 2 System" ? 150000 : 260000) /
                           ((study.tier === "Tier 1 System" ? 697 : study.tier === "Tier 2 System" ? 1397 : 2197) * 12)
                         ) * 100)}%
                       </span>
