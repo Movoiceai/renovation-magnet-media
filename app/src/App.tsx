@@ -11,27 +11,31 @@ import { Guarantee } from './sections/Guarantee';
 import { Implementation } from './sections/Implementation';
 import { CTA } from './sections/CTA';
 import { Footer } from './sections/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navigation />
-      <main>
-        <Hero />
-        <Problem />
-        <Solution />
-        <HowItWorks />
-        <ClientPortal />
-        <Comparison />
-        <Pricing />
-        <CaseStudies />
-        <Guarantee />
-        <Implementation />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+        <Navigation />
+        <main>
+          <Hero />
+          <Problem />
+          <Solution />
+          <HowItWorks />
+          <ClientPortal />
+          <Comparison />
+          <Pricing />
+          <CaseStudies />
+          <Guarantee />
+          <Implementation />
+          <CTA />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 
 export default App;
+

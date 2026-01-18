@@ -36,9 +36,9 @@ export function Hero() {
   };
 
   return (
-    <section 
+    <section
       ref={heroRef}
-      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-teal-50 pt-20"
+      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 pt-20"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -61,12 +61,12 @@ export function Hero() {
 
             {/* Headline */}
             <div className="space-y-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
                 The{' '}
                 <span className="text-teal">#1 AI Growth System</span>{' '}
                 for Kitchen & Bath Remodelers
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 max-w-xl">
+              <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-xl">
                 Never miss another estimate. Close more projects. Automate your growth with 24/7 AI answering, smart CRM, and done-for-you lead generation.
               </p>
             </div>
@@ -78,8 +78,8 @@ export function Hero() {
                   <Clock className="w-6 h-6 text-teal" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">24/7</p>
-                  <p className="text-sm text-gray-500">AI Answering</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">24/7</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">AI Answering</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -87,8 +87,8 @@ export function Hero() {
                   <TrendingUp className="w-6 h-6 text-teal" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">+2-3</p>
-                  <p className="text-sm text-gray-500">Extra Projects/Month</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">+2-3</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Extra Projects/Month</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -96,15 +96,15 @@ export function Hero() {
                   <Play className="w-6 h-6 text-teal" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">DFY</p>
-                  <p className="text-sm text-gray-500">Automation</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">DFY</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Automation</p>
                 </div>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('#cta')}
                 size="lg"
                 className="bg-teal hover:bg-teal-600 text-white font-semibold px-8 py-6 text-lg rounded-full btn-shine shadow-teal-lg"
@@ -112,11 +112,11 @@ export function Hero() {
                 Book Your Strategy Call
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('#how-it-works')}
-                className="border-2 border-gray-300 hover:border-teal text-gray-700 hover:text-teal font-semibold px-8 py-6 text-lg rounded-full"
+                className="border-2 border-gray-300 dark:border-gray-600 hover:border-teal text-gray-700 dark:text-gray-300 hover:text-teal font-semibold px-8 py-6 text-lg rounded-full"
               >
                 See How It Works
               </Button>
@@ -126,7 +126,7 @@ export function Hero() {
             <div className="flex items-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div 
+                  <div
                     key={i}
                     className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium text-gray-600"
                   >
@@ -134,15 +134,15 @@ export function Hero() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-gray-600">
-                <span className="font-semibold text-gray-900">50+ contractors</span> already growing with us
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="font-semibold text-gray-900 dark:text-white">50+ contractors</span> already growing with us
               </p>
             </div>
           </div>
 
           {/* Right Content - Hero Image */}
           <div className="order-1 lg:order-2 relative">
-            <div 
+            <div
               ref={imageRef}
               className="relative animate-fade-in-up"
               style={{ animationDelay: '0.3s', transition: 'transform 0.3s ease-out' }}
@@ -159,27 +159,27 @@ export function Hero() {
               </div>
 
               {/* Floating Card - Response Time */}
-              <div className="absolute -left-4 lg:-left-8 bottom-20 lg:bottom-24 bg-white rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-card animate-float">
+              <div className="absolute -left-4 lg:-left-8 bottom-20 lg:bottom-24 bg-white dark:bg-gray-800 rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-card animate-float">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-green-100 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-green-600" />
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <p className="text-2xl lg:text-3xl font-bold text-gray-900">2 min</p>
-                    <p className="text-xs lg:text-sm text-gray-500">Avg Response</p>
+                    <p className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">2 min</p>
+                    <p className="text-xs lg:text-sm text-gray-500 dark:text-gray-400">Avg Response</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating Card - Booked */}
-              <div className="absolute -right-4 lg:-right-8 top-8 lg:top-12 bg-white rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-card animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute -right-4 lg:-right-8 top-8 lg:top-12 bg-white dark:bg-gray-800 rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-card animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-teal/10 flex items-center justify-center">
                     <Clock className="w-5 h-5 lg:w-6 lg:h-6 text-teal" />
                   </div>
                   <div>
                     <p className="text-2xl lg:text-3xl font-bold text-teal">+50%</p>
-                    <p className="text-xs lg:text-sm text-gray-500">Higher Close Rate</p>
+                    <p className="text-xs lg:text-sm text-gray-500 dark:text-gray-400">Higher Close Rate</p>
                   </div>
                 </div>
               </div>

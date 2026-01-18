@@ -51,7 +51,7 @@ export function Problem() {
     <section
       id="problem"
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 bg-white overflow-hidden"
+      className="relative w-full py-20 lg:py-32 bg-white dark:bg-gray-900 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -70,10 +70,10 @@ export function Problem() {
               <AlertTriangle className="w-5 h-5 text-red-500" />
               <span className="text-sm font-medium text-red-600">The $120B Problem</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Losing 2-3 Projects Per Month?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               The US remodelling market is worth $120 billion, but contractors are losing
               $80K-120K annually just from being unavailable for 2-4 hours.
             </p>
@@ -84,7 +84,7 @@ export function Problem() {
             {problems.map((problem, index) => (
               <div
                 key={index}
-                className={`group relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-gray-100 shadow-card hover:shadow-teal-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`group relative bg-white dark:bg-gray-800 rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-gray-100 dark:border-gray-700 shadow-card hover:shadow-teal-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                 style={{ transitionDelay: `${(index + 1) * 150}ms` }}
               >
@@ -94,18 +94,18 @@ export function Problem() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4">
                   {problem.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {problem.description}
                 </p>
 
                 {/* Stat */}
-                <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+                <div className="flex items-center justify-between pt-6 border-t border-gray-100 dark:border-gray-700">
                   <div>
                     <p className="text-3xl lg:text-4xl font-bold text-red-500">{problem.stat}</p>
-                    <p className="text-sm text-gray-500">{problem.statLabel}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{problem.statLabel}</p>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-teal/10 transition-colors">
                     <TrendingDown className="w-6 h-6 text-gray-400 group-hover:text-teal transition-colors" />

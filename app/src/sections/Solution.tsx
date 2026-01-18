@@ -71,7 +71,7 @@ export function Solution() {
     <section
       id="solution"
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 bg-gray-50 overflow-hidden"
+      className="relative w-full py-20 lg:py-32 bg-gray-50 dark:bg-gray-800 overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-teal/5 rounded-full blur-3xl" />
@@ -86,10 +86,10 @@ export function Solution() {
               <Zap className="w-5 h-5 text-teal" />
               <span className="text-sm font-medium text-teal">The Complete Solution</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Renovation Magnet Media's Complete Growth System
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               We combined the best of AI technology + proven marketing strategies—made affordable for remodelers
             </p>
           </div>
@@ -99,7 +99,7 @@ export function Solution() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`group relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-card hover:shadow-teal-lg transition-all duration-500 card-hover ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`group relative bg-white dark:bg-gray-900 rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-card hover:shadow-teal-lg transition-all duration-500 card-hover ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                 style={{ transitionDelay: `${(index + 1) * 150}ms` }}
               >
@@ -109,10 +109,10 @@ export function Solution() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
 
@@ -123,7 +123,7 @@ export function Solution() {
                       <div className="w-5 h-5 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0">
                         <div className="w-2 h-2 rounded-full bg-teal" />
                       </div>
-                      {benefit}
+                      <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -132,13 +132,13 @@ export function Solution() {
           </div>
 
           {/* Results Grid */}
-          <div className={`bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-12 shadow-card transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          <div className={`bg-white dark:bg-gray-900 rounded-2xl lg:rounded-3xl p-8 lg:p-12 shadow-card transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
             <div className="text-center mb-10">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 The Transformation
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 What you can expect after implementing our system
               </p>
             </div>
@@ -147,13 +147,13 @@ export function Solution() {
               {results.map((result, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 lg:p-6 rounded-xl bg-gray-50 hover:bg-teal/5 transition-colors"
+                  className="text-center p-4 lg:p-6 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-teal/5 dark:hover:bg-teal/10 transition-colors"
                 >
                   <div className="w-12 h-12 mx-auto rounded-xl bg-teal/10 flex items-center justify-center mb-4">
                     <result.icon className="w-6 h-6 text-teal" />
                   </div>
                   <p className="text-2xl lg:text-3xl font-bold text-teal mb-1">{result.value}</p>
-                  <p className="text-sm text-gray-600">{result.label}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{result.label}</p>
                 </div>
               ))}
             </div>
@@ -165,7 +165,7 @@ export function Solution() {
                   <MessageSquare className="w-4 h-4 text-teal" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-700">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
                     <span className="font-semibold text-teal">Key insight:</span> We combined the best of AI answering + done-for-you marketing + CRM automation—made affordable for remodelers. Our system starts at just <span className="font-bold text-teal">$697/month</span>.
                   </p>
                 </div>

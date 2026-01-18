@@ -72,7 +72,7 @@ export function Comparison() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full py-20 lg:py-32 bg-white overflow-hidden"
+      className="relative w-full py-20 lg:py-32 bg-white dark:bg-gray-900 overflow-hidden"
     >
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
@@ -83,10 +83,10 @@ export function Comparison() {
               <Star className="w-5 h-5 text-teal" />
               <span className="text-sm font-medium text-teal">Why We're Different</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               The Complete Growth Partner
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               See how we stack up against the competition
             </p>
           </div>
@@ -96,17 +96,17 @@ export function Comparison() {
             }`}>
             <div className="overflow-x-auto">
               <div className="inline-block min-w-full align-middle">
-                <div className="overflow-hidden shadow-card rounded-2xl lg:rounded-3xl border border-gray-100">
-                  <table className="min-w-full divide-y divide-gray-100">
-                    <thead className="bg-gray-50">
+                <div className="overflow-hidden shadow-card rounded-2xl lg:rounded-3xl border border-gray-100 dark:border-gray-700">
+                  <table className="min-w-full divide-y divide-gray-100 dark:divide-gray-700">
+                    <thead className="bg-gray-50 dark:bg-gray-800">
                       <tr>
-                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-white">
                           Feature
                         </th>
                         {competitors.map((comp, index) => (
                           <th
                             key={index}
-                            className={`px-6 py-4 text-center text-sm font-semibold ${comp.highlighted ? 'bg-teal text-white' : 'text-gray-900'
+                            className={`px-6 py-4 text-center text-sm font-semibold ${comp.highlighted ? 'bg-teal text-white' : 'text-gray-900 dark:text-white'
                               }`}
                           >
                             <div className="flex items-center justify-center gap-2">
@@ -117,25 +117,25 @@ export function Comparison() {
                         ))}
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-gray-100 bg-white">
+                    <tbody className="divide-y divide-gray-100 dark:divide-gray-700 bg-white dark:bg-gray-900">
                       {features.map((feature, index) => (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-gray-50/50' : ''}>
-                          <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                        <tr key={index} className={index % 2 === 0 ? 'bg-gray-50/50 dark:bg-gray-800/50' : ''}>
+                          <td className="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
                             {feature.name}
                           </td>
                           <td className="px-6 py-4">
                             {typeof feature.wahi === 'string' ? (
-                              <span className="text-sm text-gray-700 text-center block">{feature.wahi}</span>
+                              <span className="text-sm text-gray-700 dark:text-gray-300 text-center block">{feature.wahi}</span>
                             ) : renderCheck(feature.wahi)}
                           </td>
                           <td className="px-6 py-4">
                             {typeof feature.growth === 'string' ? (
-                              <span className="text-sm text-gray-700 text-center block">{feature.growth}</span>
+                              <span className="text-sm text-gray-700 dark:text-gray-300 text-center block">{feature.growth}</span>
                             ) : renderCheck(feature.growth)}
                           </td>
                           <td className="px-6 py-4">
                             {typeof feature.more === 'string' ? (
-                              <span className="text-sm text-gray-700 text-center block">{feature.more}</span>
+                              <span className="text-sm text-gray-700 dark:text-gray-300 text-center block">{feature.more}</span>
                             ) : renderCheck(feature.more)}
                           </td>
                           <td className="px-6 py-4 bg-teal/5">
@@ -161,7 +161,7 @@ export function Comparison() {
             {comparisons.map((comp, index) => (
               <div
                 key={index}
-                className={`bg-gray-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`bg-gray-50 dark:bg-gray-800 rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                 style={{ transitionDelay: `${(index + 3) * 150}ms` }}
               >
@@ -169,9 +169,9 @@ export function Comparison() {
                   <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center">
                     <comp.icon className="w-5 h-5 text-teal" />
                   </div>
-                  <span className="font-semibold text-gray-900">vs {comp.competitor}</span>
+                  <span className="font-semibold text-gray-900 dark:text-white">vs {comp.competitor}</span>
                 </div>
-                <p className="text-gray-600 italic leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 italic leading-relaxed">
                   "{comp.quote}"
                 </p>
               </div>

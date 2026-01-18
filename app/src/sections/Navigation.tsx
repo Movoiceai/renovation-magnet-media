@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,11 +33,10 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'glass shadow-sm border-b border-white/20'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+          ? 'glass dark:bg-gray-900/80 shadow-sm border-b border-white/20 dark:border-gray-700/50'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <nav className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -45,9 +45,8 @@ export function Navigation() {
             <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-teal flex items-center justify-center">
               <span className="text-white font-bold text-lg lg:text-xl">RM</span>
             </div>
-            <span className={`font-bold text-lg lg:text-xl transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-gray-900'
-            }`}>
+            <span className={`font-bold text-lg lg:text-xl transition-colors ${isScrolled ? 'text-gray-900 dark:text-white' : 'text-gray-900 dark:text-white'
+              }`}>
               Renovation Magnet Media
             </span>
           </a>
@@ -58,9 +57,8 @@ export function Navigation() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors hover:text-teal ${
-                  isScrolled ? 'text-gray-700' : 'text-gray-700'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-teal ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-gray-700 dark:text-gray-300'
+                  }`}
               >
                 {link.label}
               </button>
@@ -69,14 +67,15 @@ export function Navigation() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <a 
-              href="tel:+18001234567" 
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-teal transition-colors"
+            <ThemeToggle />
+            <a
+              href="tel:+18001234567"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal transition-colors"
             >
               <Phone className="w-4 h-4" />
               (800) 123-4567
             </a>
-            <Button 
+            <Button
               onClick={() => scrollToSection('#cta')}
               className="bg-teal hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full btn-shine"
             >
@@ -85,35 +84,37 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
-            )}
-          </button>
+          <div className="flex lg:hidden items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+              ) : (
+                <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 pb-6' : 'max-h-0'
+            }`}
         >
-          <div className="flex flex-col gap-4 pt-4 border-t border-gray-200">
+          <div className="flex flex-col gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-left text-gray-700 font-medium hover:text-teal transition-colors py-2"
+                className="text-left text-gray-700 dark:text-gray-300 font-medium hover:text-teal transition-colors py-2"
               >
                 {link.label}
               </button>
             ))}
-            <Button 
+            <Button
               onClick={() => scrollToSection('#cta')}
               className="bg-teal hover:bg-teal-600 text-white font-semibold w-full mt-2 rounded-full"
             >

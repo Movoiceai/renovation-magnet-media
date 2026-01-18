@@ -30,6 +30,31 @@
     --teal-light: 180 20% 94%;
     --teal-dark: 180 100% 15%;
   }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
+    --card: 220 20% 14%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 20% 14%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 180 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 180 100% 50%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 180 100% 40%;
+    --teal: 180 100% 40%;
+    --teal-light: 180 30% 20%;
+    --teal-dark: 180 100% 30%;
+  }
 }
 
 @layer base {
