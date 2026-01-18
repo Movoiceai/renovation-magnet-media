@@ -31,13 +31,13 @@ export function Comparison() {
   ];
 
   const features = [
-    { name: "AI Answering", wahi: true, growth: true, more: true, us: true },
-    { name: "24/7 Coverage", wahi: true, growth: true, more: true, us: true },
-    { name: "CRM Included", wahi: true, growth: false, more: true, us: true },
+    { name: "AI Answering", wahi: true, growth: false, more: false, us: true },
+    { name: "24/7 Coverage", wahi: true, growth: false, more: true, us: true },
+    { name: "CRM Included", wahi: false, growth: false, more: true, us: true },
     { name: "Follow-Up Automation", wahi: false, growth: "limited", more: true, us: true },
-    { name: "Remodeling Focus", wahi: false, growth: false, more: false, us: true },
-    { name: "Lead Generation", wahi: false, growth: false, more: false, us: true },
-    { name: "Personal Strategy", wahi: false, growth: false, more: "limited", us: true },
+    { name: "Remodeling Focus", wahi: false, growth: false, more: true, us: true },
+    { name: "Lead Generation", wahi: false, growth: true, more: false, us: true },
+    { name: "Personal Strategy", wahi: false, growth: "limited", more: false, us: true },
     { name: "Monthly Cost", wahi: "$97-497", growth: "$5-10K setup", more: "$1-3K/mo", us: "$697-2,197" }
   ];
 
