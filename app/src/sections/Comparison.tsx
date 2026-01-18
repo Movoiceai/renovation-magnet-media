@@ -24,9 +24,9 @@ export function Comparison() {
   }, []);
 
   const competitors = [
-    { name: "Wahi", icon: null },
-    { name: "Growth Magnet", icon: null },
-    { name: "MoreEstimates", icon: null },
+    { name: "AI Answering", icon: null },
+    { name: "Lead Gen Agencies", icon: null },
+    { name: "Remodeling CRMs", icon: null },
     { name: "Us", icon: Crown, highlighted: true }
   ];
 
@@ -43,17 +43,17 @@ export function Comparison() {
 
   const comparisons = [
     {
-      competitor: "Wahi",
-      quote: "Wahi answers the phone. We answer the phone AND make sure you close the deal.",
+      competitor: "AI Answering Services",
+      quote: "They answer the phone. We answer the phone AND make sure you close the deal.",
       icon: Phone
     },
     {
-      competitor: "Growth Magnet Studio",
+      competitor: "Lead Gen Agencies",
       quote: "Built for kitchen & bath—not solar. More affordable with better control.",
       icon: Target
     },
     {
-      competitor: "MoreEstimates",
+      competitor: "Remodeling CRMs",
       quote: "Same proven model, but flat pricing + unlimited territories.",
       icon: Award
     }
@@ -70,16 +70,15 @@ export function Comparison() {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="relative w-full py-20 lg:py-32 bg-white overflow-hidden"
     >
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal/10 rounded-full mb-6">
               <Star className="w-5 h-5 text-teal" />
               <span className="text-sm font-medium text-teal">Why We're Different</span>
@@ -93,9 +92,8 @@ export function Comparison() {
           </div>
 
           {/* Comparison Table */}
-          <div className={`mb-16 lg:mb-20 transition-all duration-1000 delay-200 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`mb-16 lg:mb-20 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="overflow-x-auto">
               <div className="inline-block min-w-full align-middle">
                 <div className="overflow-hidden shadow-card rounded-2xl lg:rounded-3xl border border-gray-100">
@@ -106,11 +104,10 @@ export function Comparison() {
                           Feature
                         </th>
                         {competitors.map((comp, index) => (
-                          <th 
+                          <th
                             key={index}
-                            className={`px-6 py-4 text-center text-sm font-semibold ${
-                              comp.highlighted ? 'bg-teal text-white' : 'text-gray-900'
-                            }`}
+                            className={`px-6 py-4 text-center text-sm font-semibold ${comp.highlighted ? 'bg-teal text-white' : 'text-gray-900'
+                              }`}
                           >
                             <div className="flex items-center justify-center gap-2">
                               {comp.icon && <comp.icon className="w-4 h-4" />}
@@ -162,11 +159,10 @@ export function Comparison() {
           {/* Comparison Quotes */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {comparisons.map((comp, index) => (
-              <div 
+              <div
                 key={index}
-                className={`bg-gray-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
+                className={`bg-gray-50 rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
                 style={{ transitionDelay: `${(index + 3) * 150}ms` }}
               >
                 <div className="flex items-center gap-3 mb-4">

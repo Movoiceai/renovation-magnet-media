@@ -166,7 +166,7 @@ export function Solution() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-700">
-                    <span className="font-semibold text-teal">Key insight:</span> We combined the best of Wahi + Growth Magnet Studio + MoreEstimates—made affordable for remodelers. Our system starts at just <span className="font-bold text-teal">$697/month</span>.
+                    <span className="font-semibold text-teal">Key insight:</span> We combined the best of AI answering + done-for-you marketing + CRM automation—made affordable for remodelers. Our system starts at just <span className="font-bold text-teal">$697/month</span>.
                   </p>
                 </div>
               </div>

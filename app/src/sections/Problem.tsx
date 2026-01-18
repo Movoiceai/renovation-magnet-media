@@ -48,7 +48,7 @@ export function Problem() {
   ];
 
   return (
-    <section 
+    <section
       id="problem"
       ref={sectionRef}
       className="relative w-full py-20 lg:py-32 bg-white overflow-hidden"
@@ -64,9 +64,8 @@ export function Problem() {
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 rounded-full mb-6">
               <AlertTriangle className="w-5 h-5 text-red-500" />
               <span className="text-sm font-medium text-red-600">The $120B Problem</span>
@@ -75,7 +74,7 @@ export function Problem() {
               Losing 2-3 Projects Per Month?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              The US renovation market is worth $120 billion, but contractors are losing 
+              The US remodelling market is worth $120 billion, but contractors are losing
               $80K-120K annually just from being unavailable for 2-4 hours.
             </p>
           </div>
@@ -83,11 +82,10 @@ export function Problem() {
           {/* Problem Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {problems.map((problem, index) => (
-              <div 
+              <div
                 key={index}
-                className={`group relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-gray-100 shadow-card hover:shadow-teal-lg transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
+                className={`group relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-gray-100 shadow-card hover:shadow-teal-lg transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
                 style={{ transitionDelay: `${(index + 1) * 150}ms` }}
               >
                 {/* Icon */}
@@ -118,16 +116,15 @@ export function Problem() {
           </div>
 
           {/* Bottom Stats Bar */}
-          <div className={`mt-16 lg:mt-20 bg-teal-dark rounded-2xl lg:rounded-3xl p-8 lg:p-12 transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`mt-16 lg:mt-20 bg-teal-dark rounded-2xl lg:rounded-3xl p-8 lg:p-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="flex items-center justify-center mb-4">
                   <DollarSign className="w-10 h-10 text-yellow" />
                 </div>
                 <p className="text-4xl lg:text-5xl font-bold text-white mb-2">$120B</p>
-                <p className="text-teal-200">US Renovation Market</p>
+                <p className="text-teal-200">US Remodelling Market</p>
               </div>
               <div>
                 <div className="flex items-center justify-center mb-4">
