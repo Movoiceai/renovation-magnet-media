@@ -12,6 +12,7 @@ import { Implementation } from './sections/Implementation';
 import { CTA } from './sections/CTA';
 import { Footer } from './sections/Footer';
 import { ThemeProvider } from './context/ThemeContext';
+import { LiveDemo } from './sections/LiveDemo';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Problem />
           <Solution />
           <HowItWorks />
+          <LiveDemo />
           <ClientPortal />
           <Comparison />
           <Pricing />
