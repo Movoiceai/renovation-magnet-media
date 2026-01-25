@@ -81,7 +81,7 @@ export function LiveDemo() {
                             <div className="pt-4">
                                 <div className="inline-block p-1 bg-gradient-to-r from-teal to-yellow rounded-[2.5rem]">
                                     <a
-                                        href="tel:+13369104687"
+                                        href="tel:+19453936614"
                                         className="flex items-center gap-4 px-8 py-5 bg-white dark:bg-gray-900 rounded-[2.25rem] hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                                     >
                                         <div className="w-12 h-12 rounded-full bg-teal flex items-center justify-center text-white animate-bounce-subtle">
@@ -89,7 +89,7 @@ export function LiveDemo() {
                                         </div>
                                         <div>
                                             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Call for Live Demo</p>
-                                            <p className="text-2xl font-bold text-gray-900 dark:text-white">+1 336-910-4687</p>
+                                            <p className="text-2xl font-bold text-gray-900 dark:text-white">+1 (945) 393 6614</p>
                                         </div>
                                     </a>
                                 </div>

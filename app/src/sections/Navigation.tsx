@@ -34,8 +34,8 @@ export function Navigation() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? 'glass dark:bg-gray-900/80 shadow-sm border-b border-white/20 dark:border-gray-700/50'
-          : 'bg-transparent'
+        ? 'glass dark:bg-gray-900/80 shadow-sm border-b border-white/20 dark:border-gray-700/50'
+        : 'bg-transparent'
         }`}
     >
       <nav className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
@@ -69,11 +69,11 @@ export function Navigation() {
           <div className="hidden lg:flex items-center gap-4">
             <ThemeToggle />
             <a
-              href="tel:+18001234567"
+              href="tel:+19453936614"
               className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-teal transition-colors"
             >
               <Phone className="w-4 h-4" />
-              (800) 123-4567
+              +1 (945) 393 6614
             </a>
             <Button
               onClick={() => scrollToSection('#cta')}

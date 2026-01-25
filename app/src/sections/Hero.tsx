@@ -125,12 +125,17 @@ export function Hero() {
             {/* Trust Badge */}
             <div className="flex items-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
+                {[
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80',
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80',
+                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=80',
+                  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&q=80'
+                ].map((url, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium text-gray-600"
+                    className="w-8 h-8 rounded-full border-2 border-white overflow-hidden shadow-sm"
                   >
-                    {String.fromCharCode(64 + i)}
+                    <img src={url} alt={`Client ${i + 1}`} className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>

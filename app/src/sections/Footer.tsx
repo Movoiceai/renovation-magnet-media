@@ -58,13 +58,13 @@ export function Footer() {
 
               {/* Contact Info */}
               <div className="space-y-3">
-                <a href="tel:+18001234567" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                <a href="tel:+19453936614" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                   <Phone className="w-5 h-5 text-teal" />
-                  (800) 123-4567
+                  +1 (945) 393 6614
                 </a>
-                <a href="mailto:hello@renovationmagnetmedia.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                <a href="mailto:contact@renovationmagnetmedia.com" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
                   <Mail className="w-5 h-5 text-teal" />
-                  hello@renovationmagnetmedia.com
+                  contact@renovationmagnetmedia.com
                 </a>
                 <div className="flex items-center gap-3 text-gray-400">
                   <MapPin className="w-5 h-5 text-teal" />
