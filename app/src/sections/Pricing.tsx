@@ -60,20 +60,20 @@ export function Pricing() {
       popular: true
     },
     {
-      name: "Tier 3",
-      title: "Done-For-You Growth",
-      price: 2197,
-      description: "For aggressive scaling ($1M+ ARR goal)",
+      name: "Agency Partner",
+      title: "End-to-End DFY Solution",
+      price: 4000,
+      description: "Complete DFY Lead Gen & Sales Cycle Management",
       features: [
         "Everything in Tier 2 plus:",
-        "Done-For-You lead generation",
-        "Facebook & Google ad campaigns",
-        "Landing pages & A/B testing",
-        "Monthly ad optimization & reporting",
-        "Dedicated account manager",
-        "Weekly strategy calls"
+        "DFY Lead Gen (Ads + Outreach)",
+        "Full Outreach & Conversation Handling",
+        "AI Voice Agent for Qualification",
+        "Direct-to-Sales-Cycle Booking",
+        "Dedicated Account Manager",
+        "Weekly Strategy Calls"
       ],
-      result: "+8-15 leads/mo + 12-20 projects",
+      result: "Full Pipeline Automation",
       icon: Crown,
       popular: false
     }
@@ -87,7 +87,7 @@ export function Pricing() {
   };
 
   return (
-    <section 
+    <section
       id="pricing"
       ref={sectionRef}
       className="relative w-full py-20 lg:py-32 bg-gray-50 overflow-hidden"
@@ -99,15 +99,14 @@ export function Pricing() {
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal/10 rounded-full mb-6">
               <Sparkles className="w-5 h-5 text-teal" />
               <span className="text-sm font-medium text-teal">Choose Your Growth Level</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Simple, Transparent Pricing
+              Choose Your Growth Engine
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
               Start at any tier. Upgrade anytime. Month-to-month. No contracts.
@@ -120,14 +119,12 @@ export function Pricing() {
               </span>
               <button
                 onClick={() => setIsYearly(!isYearly)}
-                className={`relative w-14 h-7 rounded-full transition-colors ${
-                  isYearly ? 'bg-teal' : 'bg-gray-300'
-                }`}
+                className={`relative w-14 h-7 rounded-full transition-colors ${isYearly ? 'bg-teal' : 'bg-gray-300'
+                  }`}
               >
                 <span
-                  className={`absolute top-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform ${
-                    isYearly ? 'left-8' : 'left-1'
-                  }`}
+                  className={`absolute top-1 w-5 h-5 bg-white rounded-full shadow-md transition-transform ${isYearly ? 'left-8' : 'left-1'
+                    }`}
                 />
               </button>
               <span className={`text-sm font-medium ${isYearly ? 'text-gray-900' : 'text-gray-500'}`}>
@@ -144,13 +141,12 @@ export function Pricing() {
           {/* Pricing Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {tiers.map((tier, index) => (
-              <div 
+              <div
                 key={index}
-                className={`relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${
-                  tier.popular 
-                    ? 'shadow-teal-lg border-2 border-teal scale-105 z-10' 
-                    : 'shadow-card hover:shadow-teal-lg'
-                } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 transition-all duration-1000 ${tier.popular
+                  ? 'shadow-teal-lg border-2 border-teal scale-105 z-10'
+                  : 'shadow-card hover:shadow-teal-lg'
+                  } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: `${(index + 1) * 150}ms` }}
               >
                 {/* Popular Badge */}
@@ -166,9 +162,8 @@ export function Pricing() {
                 {/* Tier Info */}
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                      tier.popular ? 'bg-teal' : 'bg-teal/10'
-                    }`}>
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${tier.popular ? 'bg-teal' : 'bg-teal/10'
+                      }`}>
                       <tier.icon className={`w-5 h-5 ${tier.popular ? 'text-white' : 'text-teal'}`} />
                     </div>
                     <div>
@@ -195,13 +190,12 @@ export function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <Button 
+                <Button
                   onClick={() => scrollToSection('#cta')}
-                  className={`w-full mb-6 py-6 rounded-full font-semibold ${
-                    tier.popular 
-                      ? 'bg-teal hover:bg-teal-600 text-white btn-shine' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+                  className={`w-full mb-6 py-6 rounded-full font-semibold ${tier.popular
+                    ? 'bg-teal hover:bg-teal-600 text-white btn-shine'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    }`}
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -211,9 +205,8 @@ export function Pricing() {
                 <div className="space-y-3">
                   {tier.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                        tier.popular ? 'bg-teal/10' : 'bg-gray-100'
-                      }`}>
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${tier.popular ? 'bg-teal/10' : 'bg-gray-100'
+                        }`}>
                         <Check className={`w-3 h-3 ${tier.popular ? 'text-teal' : 'text-gray-600'}`} />
                       </div>
                       <span className="text-sm text-gray-700">{feature}</span>
@@ -222,9 +215,8 @@ export function Pricing() {
                 </div>
 
                 {/* Expected Result */}
-                <div className={`mt-6 pt-6 border-t ${
-                  tier.popular ? 'border-teal/20' : 'border-gray-100'
-                }`}>
+                <div className={`mt-6 pt-6 border-t ${tier.popular ? 'border-teal/20' : 'border-gray-100'
+                  }`}>
                   <p className="text-sm text-gray-600 mb-2">Expected result:</p>
                   <p className={`font-semibold ${tier.popular ? 'text-teal' : 'text-gray-900'}`}>
                     {tier.result}
@@ -235,9 +227,8 @@ export function Pricing() {
           </div>
 
           {/* Bottom Note */}
-          <div className={`mt-12 text-center transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+          <div className={`mt-12 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}>
             <p className="text-gray-600 mb-4">
               All plans include a <span className="font-semibold text-teal">90-day money-back guarantee</span>
             </p>

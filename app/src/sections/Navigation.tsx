@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +24,19 @@ export function Navigation() {
     { href: '#how-it-works', label: 'How It Works' },
     { href: '#pricing', label: 'Pricing' },
     { href: '#proof', label: 'Results' },
+    { href: '/blog/speed-to-lead-matters', label: 'Blog', isRoute: true },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (link: any) => {
+    if (link.isRoute) {
+      navigate(link.href);
+    } else if (location.pathname !== '/') {
+      navigate('/' + link.href);
+    } else {
+      const element = document.querySelector(link.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -41,7 +51,7 @@ export function Navigation() {
       <nav className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg bg-teal flex items-center justify-center">
               <span className="text-white font-bold text-lg lg:text-xl">RM</span>
             </div>
@@ -49,14 +59,14 @@ export function Navigation() {
               }`}>
               Renovation Magnet Media
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link)}
                 className={`text-sm font-medium transition-colors hover:text-teal ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-gray-700 dark:text-gray-300'
                   }`}
               >
@@ -76,7 +86,7 @@ export function Navigation() {
               +1 (945) 393 6614
             </a>
             <Button
-              onClick={() => scrollToSection('#cta')}
+              onClick={() => handleNavClick({ href: '#cta' })}
               className="bg-teal hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full btn-shine"
             >
               Book a Call
@@ -108,14 +118,14 @@ export function Navigation() {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link)}
                 className="text-left text-gray-700 dark:text-gray-300 font-medium hover:text-teal transition-colors py-2"
               >
                 {link.label}
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection('#cta')}
+              onClick={() => handleNavClick({ href: '#cta' })}
               className="bg-teal hover:bg-teal-600 text-white font-semibold w-full mt-2 rounded-full"
             >
               Book a Call
