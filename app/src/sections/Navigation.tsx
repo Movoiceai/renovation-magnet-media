@@ -24,7 +24,7 @@ export function Navigation() {
     { href: '#how-it-works', label: 'How It Works' },
     { href: '#pricing', label: 'Pricing' },
     { href: '#proof', label: 'Results' },
-    { href: '/blog/speed-to-lead-matters', label: 'Blog', isRoute: true },
+    { href: '/blog/ai-vs-human-receptionist', label: 'Blog', isRoute: true },
   ];
 
   const handleNavClick = (link: any) => {

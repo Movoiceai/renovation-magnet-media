@@ -19,7 +19,7 @@ export function Footer() {
       { label: 'Contact', href: '#cta' }
     ],
     resources: [
-      { label: 'Blog', href: '#' },
+      { label: 'Blog', href: '/blog/ai-vs-human-receptionist' },
       { label: 'Help Center', href: '#' },
       { label: 'Community', href: '#' },
       { label: 'Partners', href: '#' }

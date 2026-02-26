@@ -4,6 +4,7 @@ import { Footer } from './sections/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 import { LandingPage } from './pages/LandingPage';
 import { SpeedToLeadMatters } from './pages/posts/SpeedToLeadMatters';
+import { AiVsHumanReceptionist } from './pages/posts/AiVsHumanReceptionist';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/blog/speed-to-lead-matters" element={<SpeedToLeadMatters />} />
+            <Route path="/blog/ai-vs-human-receptionist" element={<AiVsHumanReceptionist />} />
           </Routes>
           <Footer />
         </div>
