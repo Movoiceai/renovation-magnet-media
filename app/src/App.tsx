@@ -5,6 +5,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { LandingPage } from './pages/LandingPage';
 import { SpeedToLeadMatters } from './pages/posts/SpeedToLeadMatters';
 import { AiVsHumanReceptionist } from './pages/posts/AiVsHumanReceptionist';
+import { FollowUpLeakingCash } from './pages/posts/FollowUpLeakingCash';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/blog/speed-to-lead-matters" element={<SpeedToLeadMatters />} />
             <Route path="/blog/ai-vs-human-receptionist" element={<AiVsHumanReceptionist />} />
+            <Route path="/blog/follow-up-leaking-cash" element={<FollowUpLeakingCash />} />
           </Routes>
           <Footer />
         </div>
