@@ -24,7 +24,7 @@ export function Navigation() {
     { href: '#how-it-works', label: 'How It Works' },
     { href: '#pricing', label: 'Pricing' },
     { href: '#proof', label: 'Results' },
-    { href: '/blog/follow-up-leaking-cash', label: 'Blog', isRoute: true },
+    { href: '/blog/seven-mistakes', label: 'Blog', isRoute: true },
   ];
 
   const handleNavClick = (link: any) => {

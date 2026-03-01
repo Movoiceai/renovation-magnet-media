@@ -6,6 +6,7 @@ import { LandingPage } from './pages/LandingPage';
 import { SpeedToLeadMatters } from './pages/posts/SpeedToLeadMatters';
 import { AiVsHumanReceptionist } from './pages/posts/AiVsHumanReceptionist';
 import { FollowUpLeakingCash } from './pages/posts/FollowUpLeakingCash';
+import { SevenMistakes } from './pages/posts/SevenMistakes';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/blog/speed-to-lead-matters" element={<SpeedToLeadMatters />} />
             <Route path="/blog/ai-vs-human-receptionist" element={<AiVsHumanReceptionist />} />
             <Route path="/blog/follow-up-leaking-cash" element={<FollowUpLeakingCash />} />
+            <Route path="/blog/seven-mistakes" element={<SevenMistakes />} />
           </Routes>
           <Footer />
         </div>
