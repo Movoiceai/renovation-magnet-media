@@ -7,6 +7,7 @@ import { SpeedToLeadMatters } from './pages/posts/SpeedToLeadMatters';
 import { AiVsHumanReceptionist } from './pages/posts/AiVsHumanReceptionist';
 import { FollowUpLeakingCash } from './pages/posts/FollowUpLeakingCash';
 import { SevenMistakes } from './pages/posts/SevenMistakes';
+import { WordOfMouthNotEnough } from './pages/posts/WordOfMouthNotEnough';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/blog/ai-vs-human-receptionist" element={<AiVsHumanReceptionist />} />
             <Route path="/blog/follow-up-leaking-cash" element={<FollowUpLeakingCash />} />
             <Route path="/blog/seven-mistakes" element={<SevenMistakes />} />
+            <Route path="/blog/word-of-mouth-not-enough" element={<WordOfMouthNotEnough />} />
           </Routes>
           <Footer />
         </div>
