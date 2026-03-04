@@ -19,7 +19,7 @@ export function Footer() {
       { label: 'Contact', href: '#cta' }
     ],
     resources: [
-      { label: 'Blog', href: '/blog/word-of-mouth-not-enough' },
+      { label: 'Blog', href: '/blog/lead-follow-up-secrets' },
       { label: 'Help Center', href: '#' },
       { label: 'Community', href: '#' },
       { label: 'Partners', href: '#' }
